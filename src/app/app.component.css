@@ -92,6 +92,17 @@ button {
     padding: 0 16px;
 }
 
+.page {
+    padding-top:100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 16px;
+    max-width: 100%;
+}
+
 @media screen and (min-width: 600px) {
     .hamburger-button {
         display: none;
@@ -119,5 +130,26 @@ button {
 
     .app-wrapper {
         padding: 0 80px;
+    }
+
+    .page {
+        padding-top: 212px;
+    }
+
+    .grid {
+        grid-column-gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .grid {
+        grid-column-gap: 28px;
     }
 }
