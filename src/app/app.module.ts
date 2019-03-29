@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { AttendingComponent } from './attending/attending.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RegistrationComponent } from './registration/registration.component';
     AboutComponent,
     ScheduleComponent,
     AttendingComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
