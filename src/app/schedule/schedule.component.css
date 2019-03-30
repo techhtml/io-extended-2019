@@ -10,7 +10,7 @@
     border-bottom: 1px solid #e8eaed;
 }
 
-.schedule-item {
+.schedule-link {
     padding: 0 0 24px;
 }
 
@@ -66,12 +66,13 @@
         grid-column: 1;
         border-right: 1px solid #e8eaed;
     }
-    
-    .schedule-item {
+
+    .schedule-link {
+        display: block;
         padding: 32px calc((((100% - 180px) / 10) * 1) + 0px + 20px);
     }
-
-    .schedule-item:hover {
+    
+    .schedule-link:hover {
         background: #f8f9fa;
     }
 

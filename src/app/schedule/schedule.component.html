@@ -35,18 +35,20 @@
       </div>
       <div class="schedule-item-container">
         <div class="schedule-item" *ngFor="let schedule of session.schedules">
-          <div class="schedule-name">
-            {{schedule.name}}
-          </div>
-          <div class="schedule-meta">
-            <div class="schedule-place">
-              {{schedule.place}}
+          <a class="schedule-link" routerLink="/schedule/{{schedule.id}}">
+            <div class="schedule-name">
+              {{schedule.name}}
             </div>
-            <div class="schedule-categories">
-              <span *ngFor="let category of schedule.categories">{{category}}</span>
+            <div class="schedule-meta">
+              <div class="schedule-place">
+                {{schedule.place}}
+              </div>
+              <div class="schedule-categories">
+                <span *ngFor="let category of schedule.categories">{{category}}</span>
+              </div>
+              <div class="schedule-outlink"></div>
             </div>
-            <div class="schedule-outlink"></div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
