@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionList } from '../schedule-list';
+import { ScheduleList } from '../schedule';
+import { ScheduleService } from './schedule.service';
 
 @Component({
   selector: 'app-schedule',
@@ -8,11 +9,17 @@ import { SessionList } from '../schedule-list';
 })
 export class ScheduleComponent implements OnInit {
 
-  sessionList = SessionList;
+  sessionList: ScheduleList[]
   
-  constructor() { }
+  constructor(private scheduleService: ScheduleService) {}
 
   ngOnInit() {
+    this.getSchedule();
+  }
+
+  getSchedule(): void {
+    this.scheduleService.getSchedule()
+      .subscribe(sessionList => this.sessionList = sessionList)
   }
 
 }
