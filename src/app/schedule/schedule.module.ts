@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ScheduleRoutingModule } from './schedule-routing.module';
 import { SessionDetailComponent } from './session-detail/session-detail.component';
+import { SessionComponent } from './session/session.component';
 
 @NgModule({
-  declarations: [SessionDetailComponent],
+  declarations: [SessionDetailComponent, SessionComponent],
   imports: [
     CommonModule,
     ScheduleRoutingModule

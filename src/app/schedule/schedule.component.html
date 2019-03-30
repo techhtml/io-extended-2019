@@ -28,20 +28,20 @@
     </h1>
   </section>
   <div class="io-ext-schedule">
-    <div class="schedule-container" *ngFor="let session of sessionList">
+    <div class="schedule-container" *ngFor="let schedule of scheduleList">
       <div class="schedule-time">
-        <span class="schedule-time-info">{{session.startTime}}</span>
-        <span class="schedule-time-ampm">{{session.ampm}}</span>
+        <span class="schedule-time-info">{{schedule.startTime}}</span>
+        <span class="schedule-time-ampm">{{schedule.ampm}}</span>
       </div>
       <div class="schedule-item-container">
-        <div class="schedule-item" *ngFor="let schedule of session.schedules">
-          <a class="schedule-link" routerLink="/schedule/{{schedule.id}}">
+        <div class="schedule-item" *ngFor="let session of schedule.sessions">
+          <a class="schedule-link" routerLink="/schedule/{{session}}">
             <div class="schedule-name">
-              {{schedule.name}}
+              {{sessionList[session].name}}
             </div>
             <div class="schedule-meta">
               <div class="schedule-place">
-                {{schedule.place}}
+                {{sessionList[session].place}}
               </div>
               <div class="schedule-categories">
                 <span *ngFor="let category of schedule.categories">{{category}}</span>

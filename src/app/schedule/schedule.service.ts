@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
-
-import { ScheduleList } from '../schedule';
-import { SessionList } from '../schedule-list';
+import { Schedule } from '../schedule';
+import { ScheduleList } from '../schedule-list';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ScheduleService {
-  getSchedule(): Observable<ScheduleList[]> {
-    return of(SessionList);
+  getScheduleList(): Observable<Schedule[]> {
+    return of(ScheduleList);
   }
 
   constructor() { }

@@ -1,6 +1,6 @@
-export class ScheduleList {
+export class Schedule {
     id: number;
-    schedules: object;
     startTime: string;
     ampm: string;
+    sessions: object;
 }

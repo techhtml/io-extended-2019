@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ScheduleList } from '../schedule';
+import { Schedule } from '../schedule';
 import { ScheduleService } from './schedule.service';
+import { Session } from '../session';
+import { SessionService } from './session.service';
 
 @Component({
   selector: 'app-schedule',
@@ -9,17 +11,27 @@ import { ScheduleService } from './schedule.service';
 })
 export class ScheduleComponent implements OnInit {
 
-  sessionList: ScheduleList[]
-  
-  constructor(private scheduleService: ScheduleService) {}
+  scheduleList: Schedule[]
+  sessionList: Session[]
+
+  constructor(
+    private scheduleService: ScheduleService,
+    private sessionService: SessionService
+  ) {}
 
   ngOnInit() {
-    this.getSchedule();
+    this.getScheduleList();
+    this.getSessionList();
   }
 
-  getSchedule(): void {
-    this.scheduleService.getSchedule()
-      .subscribe(sessionList => this.sessionList = sessionList)
+  getScheduleList(): void {
+    this.scheduleService.getScheduleList()
+      .subscribe(scheduleList => this.scheduleList = scheduleList)
+  }
+
+  getSessionList(): void {
+    this.sessionService.getSessionList()
+      .subscribe(sessionList => this.sessionList = sessionList);
   }
 
 }
