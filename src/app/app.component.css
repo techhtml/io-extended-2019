@@ -48,7 +48,7 @@
         right: auto;
         flex-direction: column;
         justify-content: center;
-        padding-top: 85px;
+        padding-top: 115px;
     }
 
     .nav {
@@ -66,11 +66,11 @@
 
     .hamburger-button {
         display: block;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         z-index: 151;
-        padding: 16px 32px;
+        padding: 32px;
     }
 
     .app-wrapper {

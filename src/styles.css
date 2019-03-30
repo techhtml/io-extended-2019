@@ -32,3 +32,32 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     margin: 0;
 }
+
+.io-ext-section {
+    padding: 40px 15px;
+    max-width: 720px;
+}
+
+.io-ext-banner {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.io-ext-meta {
+    font-weight: 500;
+}
+
+@media (min-width: 600px) {
+    .io-ext-section {
+        padding: 120px 60px;
+    }
+
+    .io-ext-banner {
+        font-size: 32px;
+    }
+
+    .io-ext-meta {
+        font-size: 16px;
+    }
+}
