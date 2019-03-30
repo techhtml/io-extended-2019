@@ -8,6 +8,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { AttendingComponent } from './attending/attending.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { TeamComponent } from './team/team.component';
+import { SpeakersComponent } from './speakers/speakers.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TeamComponent } from './team/team.component';
     ScheduleComponent,
     AttendingComponent,
     RegistrationComponent,
-    TeamComponent
+    TeamComponent,
+    SpeakersComponent
   ],
   imports: [
     BrowserModule,
