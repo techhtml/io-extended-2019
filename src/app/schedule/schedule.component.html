@@ -28,82 +28,22 @@
       </h1>
     </section>
     <div class="io-ext-schedule">
-      <div class="schedule-container">
+      <div class="schedule-container" *ngFor="let session of sessionList">
         <div class="schedule-time">
-          <span class="schedule-time-info">11:00</span>
-          <span class="schedule-time-ampm">AM</span>
+          <span class="schedule-time-info">{{session.startTime}}</span>
+          <span class="schedule-time-ampm">{{session.ampm}}</span>
         </div>
         <div class="schedule-item-container">
-          <div class="schedule-item">
+          <div class="schedule-item" *ngFor="let schedule of session.schedules">
             <div class="schedule-name">
-              Regisration
+              {{schedule.name}}
             </div>
             <div class="schedule-meta">
               <div class="schedule-place">
-                Lobby
+                {{schedule.place}}
               </div>
-              <div class="schedule-categories"></div>
-              <div class="schedule-outlink"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="schedule-container">
-        <div class="schedule-time">
-          <span class="schedule-time-info">12:00</span>
-          <span class="schedule-time-ampm">PM</span>
-        </div>
-        <div class="schedule-item-container">
-          <div class="schedule-item">
-            <div class="schedule-name">
-              Keynote
-            </div>
-            <div class="schedule-meta">
-              <div class="schedule-place">A·B·C Hall</div>
-              <div class="schedule-categories"></div>
-              <div class="schedule-outlink"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="schedule-container">
-        <div class="schedule-time">
-          <span class="schedule-time-info">12:50</span>
-          <span class="schedule-time-ampm">PM</span>
-        </div>
-        <div class="schedule-item-container">
-          <div class="schedule-item">
-            <div class="schedule-name">
-              What's new in Android Q
-            </div>
-            <div class="schedule-meta">
-              <div class="schedule-place">A Hall</div>
               <div class="schedule-categories">
-                <span class="android">Android</span>
-              </div>
-              <div class="schedule-outlink"></div>
-            </div>
-          </div>
-          <div class="schedule-item">
-            <div class="schedule-name">
-                What's new in TensorFlow
-            </div>
-            <div class="schedule-meta">
-              <div class="schedule-place">B Hall</div>
-              <div class="schedule-categories">
-                <span class="ml">ML</span>
-              </div>
-              <div class="schedule-outlink"></div>
-            </div>
-          </div>
-          <div class="schedule-item">
-            <div class="schedule-name">
-              Exploring what're new in Web for the Natively app
-            </div>
-            <div class="schedule-meta">
-              <div class="schedule-place">C Hall</div>
-              <div class="schedule-categories">
-                <span class="web">Web</span>
+                <span *ngFor="let category of schedule.categories">{{category}}</span>
               </div>
               <div class="schedule-outlink"></div>
             </div>

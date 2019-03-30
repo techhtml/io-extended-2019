@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SessionList } from '../schedule-list';
 
 @Component({
   selector: 'app-schedule',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleComponent implements OnInit {
 
+  sessionList = SessionList;
+  
   constructor() { }
 
   ngOnInit() {
